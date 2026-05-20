@@ -1,21 +1,17 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
-import  Logo from '../assets/Logo.svg'
+import Logo from '../assets/adaptive-icon.png'
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
+      <Text style={[styles.title, {color: 'purple'}]}>
         The Number One
       </Text>
       <Text style={{fontSize: 10, fontWeight: 'black',}}>
         People need to realise their potential
+        Hello World
       </Text>
-
-      <View>
-        <Text>Please subscribe</Text>
-        <Image source={Logo} />
-      </View> 
 
     </View>
     
@@ -31,6 +27,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff'
+
+  },
+  img: {
+    marginVertical: 20,
 
   },
   title: {
