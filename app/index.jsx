@@ -1,20 +1,19 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { Link } from 'expo-router'
 import React from 'react'
 import Logo from '../assets/adaptive-icon.png'
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text style={[styles.title, {color: 'purple'}]}>
-        The Number One
-      </Text>
-      <Text style={{fontSize: 10, fontWeight: 'black',}}>
-        People need to realise their potential
-        Hello World
-      </Text>
-
+      <Text style={styles.header}>Welcome to My App</Text>
+      <Text style={styles.subtitle}>Tap the button below to learn more.</Text>
+      <Link href="/about" asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Go to About</Text>
+        </TouchableOpacity>
+      </Link>
     </View>
-    
   )
 }
 
@@ -36,6 +35,10 @@ const styles = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     fontSize: 18,
+  },
+  header: {
+    fontSize : 76,
+    textAlign : 'center'
   },
   card: {
     backgroundColor: '#fff'
