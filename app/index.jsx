@@ -1,17 +1,20 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import { Link } from 'expo-router'
 import React from 'react'
-import Logo from '../assets/adaptive-icon.png'
+import Logo from '../assets/MainIcon.jpg'
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Welcome to My App</Text>
-      <Text style={styles.subtitle}>Tap the button below to learn more.</Text>
-      <Link href="/about" asChild>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Go to About</Text>
-        </TouchableOpacity>
+      <Image source={Logo} style={styles.img} />
+      <Text style={styles.title}>
+        Welcome to StudentToDo
+      </Text>
+      <Text style={styles.Subtitle}>
+        Your Ultimate Study Companion
+      </Text>
+      <Link href="/about" style={styles.button}>
+        <Text style={styles.text}>Learn More</Text>
       </Link>
     </View>
   )
@@ -28,13 +31,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
 
   },
+  buttonContainer: {
+    flexDirection: 'row',
+    marginTop: 20,
+  },
   img: {
-    marginVertical: 20,
+    marginVertical: 10,
+    width: 300,
+    height: 325,
 
   },
   title: {
-    fontWeight: 'bold',
-    fontSize: 18,
+    fontWeight: 700,
+    fontSize: 25,
+    fontStyle: 'normal',
+    fontFamily: 'Montserrat',
   },
   header: {
     fontSize : 76,
@@ -51,6 +62,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     alignItems: 'center',
     backgroundColor: '#fff',
+    marginTop: 10,
   },
   text: {
     color: '#6C63FF',
@@ -58,4 +70,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     letterSpacing: 0.5,
   },
+  Subtitle: {
+    marginTop: 5,
+    fontSize: 15,
+    color: '#24242442',
+  }
 })
