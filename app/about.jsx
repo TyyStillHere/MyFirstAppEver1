@@ -1,12 +1,16 @@
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, useColorScheme } from 'react-native'
 import { Link } from 'expo-router'
 import React from 'react'
+import {Colors} from '../constants/Colors' 
+import {ThemedView} from '../components/ThemedView'
 
 const About = () => {
+  const colorScheme = useColorScheme()
+  const theme = Colors[colorScheme] ?? Colors.light
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={[styles.container, {backgroundColor: theme.background}]}>
       <Link href={'/'} style={styles.header}>Go to Home</Link>
-    </SafeAreaView>
+    </View>
   )
 }
 

@@ -3,9 +3,13 @@ import { Link } from 'expo-router'
 import React from 'react'
 import Logo from '../assets/MainIcon.jpg'
 
+//Themed Components
+
+import ThemedView from '../components/ThemedView'
+
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
       <Image source={Logo} style={styles.img} />
       <Text style={styles.title}>
         Welcome to StudentToDo
@@ -16,7 +20,7 @@ const Home = () => {
       <Link href="/about" style={styles.button}>
         <Text style={styles.text}>Learn More</Text>
       </Link>
-    </View>
+    </ThemedView>
   )
 }
 
@@ -28,7 +32,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff'
 
   },
   buttonContainer: {
