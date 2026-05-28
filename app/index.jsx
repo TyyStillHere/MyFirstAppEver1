@@ -2,18 +2,22 @@ import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import { Link } from 'expo-router'
 import React from 'react'
 import Logo from '../assets/MainIcon.jpg'
+import ThemedLogo from '../components/ThemedLogo'
+import Spacer from '../components/Spacer'
 
 //Themed Components
 
 import ThemedView from '../components/ThemedView'
+import ThemedText from '../components/ThemedText'
 
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
-      <Image source={Logo} style={styles.img} />
-      <Text style={styles.title}>
-        Welcome to StudentToDo
-      </Text>
+      <ThemedLogo style={styles.img} />
+
+      <ThemedText style={styles.title}>Welcome to StudentToDo</ThemedText>
+
+      <Spacer />
       <Text style={styles.Subtitle}>
         Your Ultimate Study Companion
       </Text>
